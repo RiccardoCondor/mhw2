@@ -1,0 +1,612 @@
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+} 
+
+
+body{
+    
+    font-family: barlow, arial, sans-serif;
+    font-weight: 400;
+    background-color: #272727;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    position:relative;
+    width: 100%;
+    color:#fff;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+
+#logo{
+    width: 150px;
+    height: 40px;
+}
+
+
+
+#barra-alta{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+    position:fixed;
+    height: 80px;
+    width:100%;
+    z-index: 10;    
+}
+
+ #angolo-destro{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ #menu{
+    display: flex;
+    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 100px;
+    padding-top: 20px;
+   
+}
+
+ #menu-alto{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 44px;
+ 
+    
+}
+
+ #menu-alto .links{
+    color:#fff;
+    font-size: 15px;
+    font-weight: 400;
+    margin:0px 15px;
+    color: rgba(255, 255, 255, 0.5);
+
+}
+
+ #menu-alto .links:hover {
+    color: rgb(255, 255, 255); 
+}
+
+#menu-basso{
+  
+    display: flex;
+    width: 100%;
+    border-radius: 35px;
+    background: rgba(0, 0, 0, 0.8);
+   
+}
+
+ #menu-basso .links{
+    display: flex;
+    align-items: center;
+    padding-left: 7px;
+    width: 100%;
+}
+
+ #menu-basso .links .nav{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    
+   
+}
+
+ #menu-basso .links .nav .sezione{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    color:#fff;
+    border-radius: 25px;
+    margin: 0px 5px;
+    padding: 8px 12px;
+}
+
+ #menu-basso .links .nav .sezione:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    
+}
+
+
+ #menu-basso .links .nav .sezione .icons{
+    margin-right:10px;
+}
+
+ #menu-basso .links .nav .sezione img{
+  width: 22px;
+  height: 20px;
+  flex-basis: 20px;
+}
+
+#barra-ricerca {
+    display: none;
+    width: 100%;
+    padding: 0 15px;
+  }
+  
+  #barra-ricerca.attivo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  #input-ricerca {
+    display:flex;
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    font-size: 15px;
+    outline: none;
+  }
+  
+  #chiudere-ricerca {
+    padding: 8px;
+    cursor: pointer;
+  }
+  
+  #chiudere-ricerca:hover {
+    color: #ff8000;
+  }
+  
+
+#search-button {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+}
+
+ #search{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff8000;   
+    cursor:pointer;
+    border: 1px transparent solid;
+    height: 60px;
+    border-radius: 50%;
+    width: 60px;
+    
+}
+
+
+#icon-cart{
+    width:25px;
+    height: 25px;
+   margin-right:22px;
+}
+
+#icon-user{
+    width: 25px;
+    height: 25px;
+}
+
+
+
+#main-pagina{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#background-link{
+    width:100%;
+    display: block;
+}
+
+#background-container{
+    background-image: url(img/ashen_one.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size:cover;
+    padding-top: 80px;
+    position:relative;
+    height: 560px; 
+    width: 100%; 
+    
+}
+
+ #sopra-banner{
+    display:flex;
+    justify-content: center;
+    height: 70vh;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+ #sopra-banner .informazioni{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    position:relative;
+    bottom:100px;
+}
+
+ #titolo-banner{
+   font-size:37px;
+   font-weight: 600;
+   margin-bottom: 10px;
+   
+}
+
+ #numeri{
+    display: flex;
+    align-items: center;
+}
+
+ #numeri .sconto{
+    background-color: #ff5400;
+    border-radius: 5px 5px 0;
+    font-weight: 700;
+    padding: 5px 6px 7px;
+    margin-right: 25px;
+}
+
+ #numeri .prezzo{
+    font-size: 40px;
+    margin-bottom: 3px;
+}
+
+
+.regione{
+    
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 1200px;
+    width: 100%;
+}
+
+.regione .barra-regione{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 40px;
+    width: 100%;
+    padding-top: 90px;
+}
+
+.regione .barra-regione h2{
+    font-size:31px;
+    color:#fff;
+}
+
+.regione .barra-regione .sezione{
+   display:flex;
+   align-items: center;
+
+}
+
+.regione .barra-regione .sezione .icons{
+    margin-left: 10px;
+    margin-top:6px;
+    height: 20px;
+    width:20px;
+}
+
+.regione .barra-regione .sezione .icons img{
+    height: 20px;
+}
+
+.lista-giochi{
+    display:flex;
+    justify-content: center;
+    margin:-15px;
+    margin-bottom: 15px;
+}
+
+.lista-giochi .gioco{
+    display:flex;
+    flex-direction: column;
+    margin: 15px;
+    
+}
+
+.lista-giochi .gioco .copertina img{
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+}
+
+
+.lista-giochi .gioco .informazioni{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin-top: 10px;
+}
+
+.lista-giochi .gioco .informazioni .nome{
+    font-size: 15px;
+    color: #fff;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.lista-giochi .gioco .informazioni .prezzo{
+    font-size: 21px;
+    font-weight: 700;
+    color: #fff;
+}
+
+#fondo-pagina{
+    display: flex;
+    flex-direction: column;
+    padding:30px;
+    width: 100%;
+    margin-bottom: 0;
+    background-color: #101010;  
+}
+
+#fondo-pagina .contenuto{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #272727;
+    
+}
+
+ #lista-link{
+    display:flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+ #lista-link{
+    display:flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+ #lista-link a{
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding:10px;
+}
+
+ #media{
+    display:flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+ #riga-icone{
+    display:flex;
+    justify-content: flex-end;
+    margin:-7px;
+    
+}
+ #social-discord{
+    background-color: rgba(88, 101, 242, .2);
+}
+
+ #social-x{
+    
+    background-color: rgba(29,155,240,.2);
+  
+}
+
+ #social-inst{
+
+    background-color: rgba(29,155,240,.2);
+
+}
+
+ #social-fb{
+    background-color:rgba(24,119,242,.2);
+}
+
+ #social-yt{
+   
+    background-color:rgba(226,43,38,.2);
+   
+}
+
+ #social-tw{
+    background-color:rgba(152,97,255,.2);
+   
+}
+
+ #social-ex{
+    background-color:rgba(255,84,0,.2);
+ 
+}
+
+
+
+ #riga-icone a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px; 
+    height: 55px;
+    border-radius: 50%;
+    margin: 7px;
+}
+
+ #riga-icone a img {
+    width: 25px;
+    height: 25px;
+}
+
+ #download{
+    display:flex;
+    margin-top:30px;
+}
+
+ #apple{
+    margin-right: 15px;
+}
+
+ #download a img{
+    border:1px solid;
+    border-radius: 7px;
+    padding:13px 21px;
+    width:143px;
+    height: 56px;
+}
+
+#fondo-pagina .contenuto .informazioni{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 15px;
+}
+
+
+ 
+    
+@media (max-width: 768px) {
+    body {
+        font-size: 14px;
+    }
+
+    #logo {
+        width: 100px;
+        height: 30px;
+    }
+
+    #barra-alta {
+        height: 50px;
+        padding: 0 10px;
+     
+    }
+
+    #menu{
+        padding:0px;
+    }
+
+    #menu-alto {
+        display: none; 
+    }
+
+    #menu-basso {
+        padding: 10px 0;
+        border-radius: 0;
+        width: 100%;
+        position: fixed;
+        top:50px;
+        left: 0;
+    }
+
+    #menu-basso .links {
+        width: 100%;
+        justify-content: center;
+    }
+
+    #menu-basso .links .nav {
+        margin: 0;
+    }
+
+    #menu-basso .links .nav .sezione {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    #menu-basso .links .nav .sezione .icons img {
+        width: 18px;
+        height: 18px;
+    }
+
+    #search-button {
+        display: none; 
+    }
+
+    #icon-cart,#icon-user {
+    width: 20px;
+    height: 20px;
+}
+
+    #background-container {
+        height: 300px;
+        padding-top: 60px; 
+    }
+
+    #sopra-banner .informazioni {
+        position: absolute;
+        bottom: 20px;
+    }
+
+     #titolo-banner {
+        font-size: 24px;
+        margin-bottom: 5px;
+    }
+
+    #numeri .prezzo {
+        font-size: 30px;
+    }
+
+    .regione .barra-regione h2 {
+        font-size: 24px;
+    }
+
+    .lista-giochi {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .lista-giochi .gioco {
+        margin: 10px 0;
+    }
+
+    .lista-giochi .gioco .informazioni .nome {
+        font-size: 14px;
+    }
+
+    .lista-giochi .gioco .informazioni .prezzo {
+        font-size: 18px;
+    }
+
+    #fondo-pagina{
+        margin-top:25px;
+    }
+
+    #fondo-pagina .contenuto {
+        flex-direction: column;
+        align-items: center;
+    }
+
+     #lista-link {
+        align-items: center;
+    }
+
+    #media {
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    #riga-icone a {
+        width: 40px;
+        height: 40px;
+    }
+
+     #download {
+        justify-content: center;
+    }
+        
+        }
+
+
