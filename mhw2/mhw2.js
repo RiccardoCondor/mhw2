@@ -51,8 +51,8 @@ function aperturaricerca(e){
   barraricerca.classList.add('attivo');
 
 }
-const searchBtn = document.querySelector('#search-button a');
-searchBtn.addEventListener('click',aperturaricerca);
+const searchbutton = document.querySelector('#search-button a');
+searchbutton.addEventListener('click',aperturaricerca);
 
 function chiusuraricerca(){
     barraricerca.classList.remove('attivo');
