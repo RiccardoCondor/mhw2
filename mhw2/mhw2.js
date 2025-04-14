@@ -32,10 +32,10 @@ const copertine = document.querySelectorAll('.gioco .copertina img');
 for (let i = 0; i < copertine.length; i++) {
     const img = copertine[i];
     img.dataset.iniziale = img.src;
-    console.log(img.dataset.iniziale);
+ 
     const parti = img.src.split('.jpg');
     img.dataset.nuova = parti[0] + '-hover.jpg';
-    console.log(img.dataset.nuova);
+
     copertine[i].addEventListener('mouseenter', sopramouse);
     copertine[i].addEventListener('mouseleave', fuorimouse);
 }
@@ -58,7 +58,7 @@ function chiusuraricerca(){
     barraricerca.classList.remove('attivo');
     menulinks.style.display = 'flex';
 }
-const searchClose = document.getElementById('chiudere-ricerca');
-searchClose.addEventListener('click',chiusuraricerca);
+const searchclose = document.getElementById('chiudere-ricerca');
+searchclose.addEventListener('click',chiusuraricerca);
 
 //
